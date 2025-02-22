@@ -1,0 +1,29 @@
+--Derleme--
+
+Kodu derlemek için gcc'nin son sürümünün kullanılması ve u.data'nın kod ile aynı yerde bulunması yeterli olacaktır. 
+
+
+--Olası u.data düzenlemeleri--
+
+Şayet u.data'da değişiklik yapılırsa, projenin başında #define'lar ile tanımlanmış ifadeleri uygun bir şekilde değiştirmek gerekecektir. 
+
+MAX_COL -> satır sayısı
+USER_NUM -> user sayısı
+MOVIE_NUM -> film sayısı
+
+Ayrıca kodda id-index eşitliği kullanıldığından dolayı yeni eklenecek kullanıcı ve filmlerin idleri kaldığı yerden eklenmelidir. Örneğin bir sonraki eklenecek kullanıcının id'si 944 olmalıdır.
+
+
+--REC_ARR_SIZE--
+
+Öneri yapmak için kullanılan arraylerin eleman sayısıdır, 20 önerinin yeterli olmadığı durumlarda artırılabilir.
+
+
+--Uygun Olmayan Inputlar--
+
+User ve id girilirken yalnıza tamsayılar girilmelidir. 
+Belirtilen sınırların dışına çıkılırsa:
+- 1'den küçük id veya öneri sayısı girilirse 1 kabul edilir.
+- USER_NUM'dan büyük id girilirse USER_NUM kabul edilir.
+-REC_ARR_SIZE'dan büyük id girilirse REC_ARR_SIZE kabul edilir.
+
